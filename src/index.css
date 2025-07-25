@@ -8,57 +8,70 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Soft pastel background system */
-    --background: 320 25% 97%;
-    --foreground: 260 15% 15%;
+    /* Modern vibrant background system */
+    --background: 270 20% 98%;
+    --foreground: 270 15% 9%;
 
-    --card: 320 30% 98%;
-    --card-foreground: 260 15% 20%;
+    --card: 270 50% 99%;
+    --card-foreground: 270 15% 15%;
 
-    --popover: 320 35% 99%;
-    --popover-foreground: 260 15% 15%;
+    --popover: 270 55% 99%;
+    --popover-foreground: 270 15% 10%;
 
-    /* Lavender primary theme */
-    --primary: 270 50% 70%;
+    /* Vibrant purple primary theme */
+    --primary: 270 91% 65%;
     --primary-foreground: 0 0% 100%;
 
-    /* Peach secondary theme */
-    --secondary: 25 60% 85%;
-    --secondary-foreground: 25 30% 25%;
+    /* Warm coral secondary theme */
+    --secondary: 14 91% 74%;
+    --secondary-foreground: 14 30% 15%;
 
-    /* Mint accent theme */
-    --accent: 150 40% 80%;
-    --accent-foreground: 150 30% 20%;
+    /* Fresh mint accent theme */
+    --accent: 158 64% 52%;
+    --accent-foreground: 158 30% 15%;
 
-    /* Pale blue muted theme */
-    --muted: 200 30% 90%;
-    --muted-foreground: 200 15% 45%;
+    /* Soft sky blue muted theme */
+    --muted: 200 50% 94%;
+    --muted-foreground: 200 25% 45%;
 
-    --destructive: 0 70% 65%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 20% 85%;
-    --input: 270 25% 92%;
-    --ring: 270 50% 70%;
+    --border: 270 30% 87%;
+    --input: 270 35% 92%;
+    --ring: 270 91% 65%;
 
-    /* Emotional color palette */
-    --lavender: 270 50% 70%;
-    --lavender-light: 270 40% 85%;
-    --peach: 25 60% 75%;
-    --peach-light: 25 50% 88%;
-    --mint: 150 40% 70%;
-    --mint-light: 150 30% 85%;
-    --pale-blue: 200 40% 80%;
-    --pale-blue-light: 200 30% 90%;
+    /* Enhanced emotional color palette */
+    --lavender: 270 91% 65%;
+    --lavender-light: 270 70% 85%;
+    --lavender-dark: 270 91% 45%;
+    --peach: 14 91% 74%;
+    --peach-light: 14 80% 88%;
+    --peach-dark: 14 91% 54%;
+    --mint: 158 64% 52%;
+    --mint-light: 158 50% 75%;
+    --mint-dark: 158 64% 32%;
+    --sky-blue: 200 91% 70%;
+    --sky-blue-light: 200 80% 85%;
+    --sky-blue-dark: 200 91% 50%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--lavender)), hsl(var(--peach)));
-    --gradient-secondary: linear-gradient(180deg, hsl(var(--mint-light)), hsl(var(--pale-blue-light)));
-    --gradient-agent: linear-gradient(45deg, hsl(var(--lavender-light)), hsl(var(--mint-light)));
+    /* Stunning gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270, 91%, 65%), hsl(14, 91%, 74%));
+    --gradient-secondary: linear-gradient(180deg, hsl(158, 64%, 52%), hsl(200, 91%, 70%));
+    --gradient-agent: linear-gradient(45deg, hsl(270, 70%, 85%), hsl(158, 50%, 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(270, 91%, 65%) 0%, hsl(14, 91%, 74%) 50%, hsl(158, 64%, 52%) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
 
-    /* Animations */
+    /* Advanced shadows */
+    --shadow-primary: 0 10px 30px -5px hsl(270, 91%, 65%, 0.3);
+    --shadow-secondary: 0 8px 25px -5px hsl(14, 91%, 74%, 0.3);
+    --shadow-accent: 0 6px 20px -3px hsl(158, 64%, 52%, 0.3);
+    --shadow-glow: 0 0 40px hsl(270, 91%, 65%, 0.4);
+
+    /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 

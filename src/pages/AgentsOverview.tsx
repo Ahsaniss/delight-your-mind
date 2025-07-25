@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -125,6 +126,8 @@ const AgentsOverview = () => {
           </Card>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

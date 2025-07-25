@@ -21,6 +21,9 @@ const Navigation = () => {
             <Link to="/agents" className={`transition-colors ${isActive('/agents') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}>
               Agents
             </Link>
+            <Link to="/reviews" className={`transition-colors ${isActive('/reviews') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}>
+              Reviews
+            </Link>
             <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}>
               About
             </Link>

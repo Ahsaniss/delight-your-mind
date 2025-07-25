@@ -62,28 +62,40 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Emotional palette
+				// Enhanced emotional palette
 				lavender: {
 					DEFAULT: 'hsl(var(--lavender))',
-					light: 'hsl(var(--lavender-light))'
+					light: 'hsl(var(--lavender-light))',
+					dark: 'hsl(var(--lavender-dark))'
 				},
 				peach: {
 					DEFAULT: 'hsl(var(--peach))',
-					light: 'hsl(var(--peach-light))'
+					light: 'hsl(var(--peach-light))',
+					dark: 'hsl(var(--peach-dark))'
 				},
 				mint: {
 					DEFAULT: 'hsl(var(--mint))',
-					light: 'hsl(var(--mint-light))'
+					light: 'hsl(var(--mint-light))',
+					dark: 'hsl(var(--mint-dark))'
 				},
-				'pale-blue': {
-					DEFAULT: 'hsl(var(--pale-blue))',
-					light: 'hsl(var(--pale-blue-light))'
+				'sky-blue': {
+					DEFAULT: 'hsl(var(--sky-blue))',
+					light: 'hsl(var(--sky-blue-light))',
+					dark: 'hsl(var(--sky-blue-dark))'
 				}
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-agent': 'var(--gradient-agent)'
+				'gradient-agent': 'var(--gradient-agent)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'primary': 'var(--shadow-primary)',
+				'secondary': 'var(--shadow-secondary)',
+				'accent': 'var(--shadow-accent)',
+				'glow': 'var(--shadow-glow)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
