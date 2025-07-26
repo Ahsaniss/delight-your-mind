@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Sparkles, Heart, Brain, ArrowRight, Users, Shield, Clock, Zap, Star, Check } from "lucide-react";
+import { Sparkles, Heart, Brain, ArrowRight, Users, Shield, Clock, Zap, Star, Check, Play } from "lucide-react";
 
 const Index = () => {
   return (
@@ -13,19 +13,19 @@ const Index = () => {
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 pt-20">
-          {/* Animated Background Elements */}
+          {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-            <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
+            <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
           </div>
 
           {/* Floating Icons */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 left-[10%] text-4xl opacity-30 animate-float">🧠</div>
-            <div className="absolute top-1/3 right-[15%] text-3xl opacity-25 animate-float-delayed">✨</div>
-            <div className="absolute bottom-1/3 left-[20%] text-3xl opacity-20 animate-float">💜</div>
-            <div className="absolute bottom-1/4 right-[10%] text-5xl opacity-15 animate-float-delayed">🌟</div>
+            <div className="absolute top-1/4 left-[10%] text-4xl opacity-30">🧠</div>
+            <div className="absolute top-1/3 right-[15%] text-3xl opacity-25">✨</div>
+            <div className="absolute bottom-1/3 left-[20%] text-3xl opacity-20">💜</div>
+            <div className="absolute bottom-1/4 right-[10%] text-5xl opacity-15">🌟</div>
           </div>
 
           <div className="relative container mx-auto px-6 py-20">
@@ -34,7 +34,7 @@ const Index = () => {
               <div className="space-y-8 text-left">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 hover:bg-white/15 transition-all duration-300">
-                  <Sparkles className="w-5 h-5 text-yellow-400 animate-spin-slow" />
+                  <Sparkles className="w-5 h-5 text-yellow-400" />
                   <span className="text-gray-200 text-sm font-semibold">AI-Powered Mental Wellness</span>
                 </div>
 
@@ -42,7 +42,7 @@ const Index = () => {
                 <div>
                   <h1 className="text-6xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
                     Delight
-                    <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+                    <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                       Your Mind
                     </span>
                   </h1>
@@ -56,12 +56,12 @@ const Index = () => {
                   <Link to="/agents">
                     <Button size="lg" className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-all duration-300 hover:scale-105 shadow-xl px-10 py-6 text-lg font-semibold w-full sm:w-auto">
                       Get Started Free
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                      <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
                   <Link to="/about">
-                    <Button size="lg" variant="outline" className="border-2 border-purple-400/50 text-purple-300 hover:bg-purple-600/20 hover:border-purple-300 transition-all duration-300 px-10 py-6 text-lg font-semibold backdrop-blur-sm w-full sm:w-auto">
-                      <span className="mr-2">🎥</span>
+                    <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 px-10 py-6 text-lg font-semibold backdrop-blur-sm w-full sm:w-auto flex items-center justify-center gap-2">
+                      <Play className="w-5 h-5" />
                       Watch Demo
                     </Button>
                   </Link>
@@ -84,16 +84,16 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Right Content - Dashboard Preview */}
-              <div className="relative">
-                {/* Main Card */}
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+              {/* Right Content - Clean Dashboard Preview */}
+              <div className="relative flex justify-center">
+                {/* Main Card - Centered and Clean */}
+                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl max-w-md w-full">
                   <div className="text-center mb-8">
                     <div className="flex justify-center gap-4 mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow">
+                      <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
                         <Brain className="w-10 h-10 text-white" />
                       </div>
-                      <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-slow animation-delay-1000">
+                      <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                         <Heart className="w-10 h-10 text-white" />
                       </div>
                     </div>
@@ -110,29 +110,32 @@ const Index = () => {
                       { emoji: "🐸", name: "MoodFrog", desc: "Playful mood enhancement", status: "busy" }
                     ].map((agent, index) => (
                       <div key={index} className="flex items-center gap-4 bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 cursor-pointer group">
-                        <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{agent.emoji}</span>
+                        <span className="text-4xl">{agent.emoji}</span>
                         <div className="flex-1">
-                          <div className="text-white font-semibold group-hover:text-purple-200 transition-colors">{agent.name}</div>
+                          <div className="text-white font-semibold">{agent.name}</div>
                           <div className="text-gray-400 text-sm">{agent.desc}</div>
                         </div>
-                        <div className={`w-3 h-3 rounded-full animate-pulse ${agent.status === 'online' ? 'bg-green-400' : 'bg-yellow-400'}`}></div>
+                        <div className={`w-3 h-3 rounded-full ${agent.status === 'online' ? 'bg-green-400' : 'bg-yellow-400'}`}></div>
                       </div>
                     ))}
                   </div>
-                </div>
 
-                {/* Floating Elements */}
-                <div className="absolute -top-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-4 shadow-lg animate-bounce-slow">
-                  <div className="text-white text-sm font-bold flex items-center gap-2">
-                    <Zap className="w-4 h-4" />
-                    AI Powered
-                  </div>
-                </div>
-                
-                <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl p-4 shadow-lg animate-bounce-slow animation-delay-2000">
-                  <div className="text-white text-sm font-bold flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
-                    Secure & Private
+                  {/* Bottom Features Inside Card */}
+                  <div className="mt-8 pt-6 border-t border-white/10">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-2 text-yellow-400 mb-1">
+                          <Zap className="w-4 h-4" />
+                          <span className="text-xs font-semibold">AI Powered</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-2 text-green-400 mb-1">
+                          <Shield className="w-4 h-4" />
+                          <span className="text-xs font-semibold">Secure & Private</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -141,7 +144,7 @@ const Index = () => {
             {/* Social Proof */}
             <div className="mt-24 text-center">
               <p className="text-purple-300 text-lg mb-8 font-medium">Trusted by mental health professionals worldwide</p>
-              <div className="flex flex-wrap justify-center items-center gap-12 text-purple-200">
+              <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 text-purple-200">
                 <div className="flex items-center gap-3 group cursor-pointer">
                   <Users className="w-6 h-6 text-purple-400 group-hover:text-purple-300 transition-colors" />
                   <span className="font-semibold">10,000+ Active Users</span>
@@ -190,7 +193,7 @@ const Index = () => {
                   <Card className="bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl h-full overflow-hidden">
                     <CardContent className="p-8 text-center h-full flex flex-col relative">
                       <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${agent.color}`}></div>
-                      <div className="text-7xl mb-6 group-hover:animate-bounce transition-transform duration-300 group-hover:scale-110">
+                      <div className="text-7xl mb-6">
                         {agent.emoji}
                       </div>
                       <h3 className="text-slate-800 font-bold text-xl mb-4 group-hover:text-purple-700 transition-colors">
@@ -201,7 +204,7 @@ const Index = () => {
                       </p>
                       <div className="inline-flex items-center text-purple-600 font-semibold group-hover:text-purple-700 transition-colors">
                         Try it now 
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                        <ArrowRight className="w-4 h-4 ml-2" />
                       </div>
                     </CardContent>
                   </Card>
@@ -231,7 +234,7 @@ const Index = () => {
               ].map((feature, index) => (
                 <Card key={index} className="bg-white border-2 border-gray-100 hover:border-purple-200 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 h-full group">
                   <CardContent className="p-10 text-center h-full flex flex-col">
-                    <div className={`w-24 h-24 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className={`w-24 h-24 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg`}>
                       <feature.icon className="w-12 h-12 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-6 text-slate-800 group-hover:text-purple-700 transition-colors">
@@ -266,7 +269,7 @@ const Index = () => {
                 { step: "3", title: "Receive Guidance", desc: "Get personalized, AI-powered support tailored to your unique situation and goals.", color: "from-pink-600 to-red-600" }
               ].map((item, index) => (
                 <div key={index} className="text-center group">
-                  <div className={`w-28 h-28 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-28 h-28 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl`}>
                     <span className="text-4xl font-bold text-white">{item.step}</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-6 text-slate-800 group-hover:text-purple-700 transition-colors">
