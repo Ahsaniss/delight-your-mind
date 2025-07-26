@@ -60,10 +60,14 @@ const Index = () => {
                     </Button>
                   </Link>
                   <Link to="/about">
-                    <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all duration-300 px-10 py-6 text-lg font-semibold backdrop-blur-sm w-full sm:w-auto flex items-center justify-center gap-2">
-                      <Play className="w-5 h-5" />
-                      Watch Demo
-                    </Button>
+                  <Button
+                    size="lg"
+                    className="group bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white transition-all duration-300 hover:scale-105 shadow-xl px-10 py-6 text-lg font-semibold w-full sm:w-auto"
+                  >
+                    <Play className="w-5 h-5" />
+                    Watch Demo
+                  </Button>
+                   
                   </Link>
                 </div>
 
