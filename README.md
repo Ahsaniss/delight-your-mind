@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# Delight Your Mind
 
-## Project info
+A collection of AI-powered therapeutic agents designed to help you navigate different emotional states and mental challenges.
 
-**URL**: https://lovable.dev/projects/551c7f0b-c1dd-480c-b60e-a6b74dc4392d
+## Project Overview
 
-## How can I edit this code?
+Delight Your Mind features four unique AI companions, each specialized in different aspects of mental wellness:
 
-There are several ways of editing your application.
+- **Overthinking Buddy** 🌪️ - Your gentle companion for taming thought spirals and managing anxiety
+- **Vibesmith** 🎨 - The creative architect of emotions who helps transform and elevate your mood
+- **Void Whisperer** 🌌 - A mystical counselor for exploring deep emotions and finding wisdom in darkness
+- **MoodFrog** 🐸 - A playful friend who helps you hop out of bad moods with joy and humor
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/551c7f0b-c1dd-480c-b60e-a6b74dc4392d) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+Make sure you have Node.js and npm installed on your system.
+- [Install Node.js with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**
+   ```sh
+   git clone <YOUR_GIT_URL>
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Navigate to the project directory**
+   ```sh
+   cd delight-your-mind
+   ```
 
-Follow these steps:
+3. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Start the development server**
+   ```sh
+   npm run dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The application will be available at `http://localhost:5173`
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Technology Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+This project is built with modern web technologies:
+
+- **React** - UI library for building interactive interfaces
+- **TypeScript** - Type-safe JavaScript for better development experience
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **shadcn/ui** - High-quality UI components
+- **Google Gemini AI** - Advanced AI model for generating therapeutic responses
+
+## Features
+
+- **Real-time AI conversations** with specialized therapeutic agents
+- **Responsive design** that works on desktop and mobile devices
+- **Modern UI/UX** with smooth animations and professional styling
+- **Privacy-focused** - conversations are not stored permanently
+- **Accessible design** following modern UX principles
+
+## Configuration
+
+### API Setup
+
+1. Get a Google Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Update the API key in `src/services/geminiService.ts`
+
+```typescript
+const apiKey = "YOUR_GEMINI_API_KEY_HERE";
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+├── components/          # Reusable UI components
+├── pages/
+│   └── agents/         # Individual agent pages
+├── services/           # API services (Gemini integration)
+├── config/             # Agent personalities and configuration
+├── hooks/              # Custom React hooks
+└── lib/                # Utility functions
+```
 
-**Use GitHub Codespaces**
+## Contributing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+### Vercel (Recommended)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy with automatic builds on every push
 
-## How can I deploy this project?
+### Netlify
 
-Simply open [Lovable](https://lovable.dev/projects/551c7f0b-c1dd-480c-b60e-a6b74dc4392d) and click on Share -> Publish.
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to [Netlify](https://netlify.com)
 
-## Can I connect a custom domain to my Lovable project?
+### Manual Deployment
 
-Yes, you can!
+```sh
+npm run build
+# Upload the dist/ folder to your hosting provider
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Issues](../../issues) section
+2. Create a new issue with detailed information
+3. Contact the development team
+
+---
+
+**Built with ❤️ for mental wellness and emotional support**
