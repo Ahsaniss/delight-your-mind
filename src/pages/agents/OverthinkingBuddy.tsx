@@ -104,169 +104,238 @@ Respond naturally as the Overthinking Buddy. Provide genuine support, practical 
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 via-slate-100 to-blue-100">
+    <div className="min-h-screen">
       <Navigation />
+      
+      {/* Hero Section - Same as Home Page */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 pt-20">
+        {/* Background Elements - Same as Home */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
+          <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
+        </div>
 
-      <div className="container mx-auto px-4 py-12 flex-1">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="text-6xl mb-4 animate-bounce">🌪️</div>
-            <h1 className="text-4xl font-bold mb-4 text-slate-800 drop-shadow">
-              Overthinking Buddy
+        {/* Floating Icons - Same as Home */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-[10%] text-4xl opacity-30">🌪️</div>
+          <div className="absolute top-1/3 right-[15%] text-3xl opacity-25">🧠</div>
+          <div className="absolute bottom-1/3 left-[20%] text-3xl opacity-20">💭</div>
+          <div className="absolute bottom-1/4 right-[10%] text-5xl opacity-15">✨</div>
+        </div>
+
+        <div className="relative container mx-auto px-6 py-20">
+          <div className="text-center">
+            <div className="text-8xl mb-6 cursor-pointer hover:animate-bounce" onClick={() => toast({ title: "*thinking* 🧠" })}>
+              🌪️
+            </div>
+            <h1 className="text-6xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
+              Overthinking
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Buddy
+              </span>
             </h1>
-            <p className="text-xl text-gray-700">
-              Your gentle companion for taming thought spirals
+            <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              Your gentle companion for taming thought spirals and finding peace in your mind.
             </p>
             
             {/* Agent Features */}
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <div className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
                 <Brain className="w-4 h-4" />
                 Anxiety Support
               </div>
-              <div className="flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
                 <MessageCircle className="w-4 h-4" />
                 Thought Analysis
               </div>
-              <div className="flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
                 <Lightbulb className="w-4 h-4" />
                 Perspective Shifts
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Privacy Notice */}
-          <div className="mb-8 animate-fade-in">
-            <PrivacyNotice />
-          </div>
+      {/* Main Content Section - Same background as home page sections */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Privacy Notice */}
+            <div className="mb-8">
+              <PrivacyNotice />
+            </div>
 
-          <Card className="bg-white/95 shadow-xl border-2 border-gray-300 mb-8 rounded-2xl">
-            <CardHeader className="bg-gradient-to-r from-slate-600 to-gray-700 text-white rounded-t-2xl">
-              <CardTitle className="text-center text-xl">
-                Let's untangle your thoughts together 🧠
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <div className="h-96 overflow-y-auto p-4 space-y-4 bg-gray-50 rounded-b-2xl border-b-2 border-gray-200">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
+            {/* Chat Interface */}
+            <Card className="bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 hover:border-purple-300 shadow-2xl rounded-3xl overflow-hidden mb-12">
+              <CardHeader className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                <CardTitle className="text-center text-xl font-semibold">
+                  Let's untangle your thoughts together 🧠
+                </CardTitle>
+                <p className="text-center text-purple-100 text-sm">
+                  Your safe space for working through overthinking • Powered by Gemini AI ✨
+                </p>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="h-96 overflow-y-auto p-6 space-y-4 bg-gradient-to-br from-slate-50 to-purple-50">
+                  {messages.map((message, index) => (
                     <div
-                      className={`max-w-[75%] p-4 rounded-2xl shadow-md border ${
-                        message.type === 'user'
-                          ? 'bg-gradient-to-r from-slate-600 to-gray-700 text-white border-gray-300'
-                          : 'bg-white text-gray-800 border-gray-200'
-                      }`}
+                      key={index}
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                      <p className="whitespace-pre-wrap leading-relaxed text-sm">{message.content}</p>
-                      <p className={`text-xs mt-2 ${
-                        message.type === 'user' ? 'text-gray-200' : 'text-gray-500'
-                      }`}>
-                        {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </p>
+                      <div
+                        className={`max-w-[75%] p-4 rounded-2xl shadow-lg border-2 ${
+                          message.type === 'user'
+                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-purple-300'
+                            : 'bg-white/90 backdrop-blur-sm text-gray-800 border-gray-200/50'
+                        }`}
+                      >
+                        <p className="whitespace-pre-wrap leading-relaxed text-sm">{message.content}</p>
+                        <p className={`text-xs mt-2 ${
+                          message.type === 'user' ? 'text-purple-100' : 'text-gray-500'
+                        }`}>
+                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
 
-                {isTyping && (
-                  <div className="flex justify-start">
-                    <div className="bg-white text-gray-800 border border-gray-200 p-4 rounded-2xl shadow-md">
-                      <div className="flex items-center gap-2">
-                        <span>🧠</span>
-                        <span className="text-slate-600">Overthinking Buddy is thinking...</span>
-                        <div className="flex gap-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="bg-white/90 backdrop-blur-sm text-gray-800 border-2 border-gray-200/50 p-4 rounded-2xl shadow-lg">
+                        <div className="flex items-center gap-2">
+                          <span>🧠</span>
+                          <span className="text-purple-600">Overthinking Buddy is thinking...</span>
+                          <div className="flex gap-1">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-                <div ref={messagesEndRef} />
-              </div>
-
-              <div className="p-4 bg-white border-t border-gray-200 rounded-b-2xl">
-                <div className="flex gap-3">
-                  <Textarea
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Share what's on your mind... (Enter to send, Shift+Enter for new line)"
-                    rows={3}
-                    className="border-gray-300 focus:border-slate-500 focus:ring-2 focus:ring-slate-200 resize-none flex-1 text-gray-800 rounded-xl"
-                    disabled={isTyping}
-                  />
-                  <Button
-                    onClick={handleSendMessage}
-                    disabled={!input.trim() || isTyping}
-                    className="bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white px-8 py-3 rounded-xl font-semibold shadow-lg"
-                  >
-                    Send 🧠
-                  </Button>
+                  )}
+                  <div ref={messagesEndRef} />
                 </div>
-              </div>
-            </CardContent>
-          </Card>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-white/90 shadow-lg border-2 border-gray-300 rounded-xl">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-3 text-slate-700 flex items-center gap-2">
-                  🧠 What I Help With
-                </h3>
-                <ul className="text-gray-600 space-y-2 text-sm">
-                  <li>• Breaking thought loops and spirals</li>
-                  <li>• Anxiety and worry management</li>
-                  <li>• Perspective shifts on situations</li>
-                  <li>• Practical mindfulness techniques</li>
-                  <li>• Gentle reality checks with humor</li>
-                </ul>
+                <div className="p-6 bg-white/90 backdrop-blur-sm border-t-2 border-gray-200/50">
+                  <div className="flex gap-3">
+                    <Textarea
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Share what's on your mind... (Enter to send, Shift+Enter for new line)"
+                      rows={3}
+                      className="border-2 border-purple-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 resize-none flex-1 text-gray-800 rounded-xl"
+                      disabled={isTyping}
+                    />
+                    <Button
+                      onClick={handleSendMessage}
+                      disabled={!input.trim() || isTyping}
+                      className={`bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 ${
+                        !input.trim() || isTyping ? 'opacity-50' : 'hover:scale-105'
+                      }`}
+                    >
+                      {isTyping ? (
+                        <span className="flex items-center gap-2">
+                          <span className="animate-spin">🌀</span>
+                          Sending...
+                        </span>
+                      ) : (
+                        "Send 🧠"
+                      )}
+                    </Button>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/90 shadow-lg border-2 border-slate-300 rounded-xl">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-3 text-gray-700 flex items-center gap-2">
-                  💡 My Approach
+            {/* Info Cards - Same style as home page cards */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 hover:border-purple-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 h-full">
+                <CardHeader className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-t-xl">
+                  <CardTitle className="text-xl font-bold flex items-center gap-2">
+                    🧠 What I Help With
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                      <span className="text-gray-600">Breaking thought loops and spirals</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      <span className="text-gray-600">Anxiety and worry management</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                      <span className="text-gray-600">Perspective shifts on situations</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      <span className="text-gray-600">Practical mindfulness techniques</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                      <span className="text-gray-600">Gentle reality checks with humor</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 hover:border-purple-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 h-full">
+                <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-t-xl">
+                  <CardTitle className="text-xl font-bold flex items-center gap-2">
+                    💡 My Approach
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    I understand overthinking because I'm designed to help people navigate complex thoughts. 
+                    I won't just tell you to "stop thinking" - instead, I'll help you work with your thoughts 
+                    in a gentler, more manageable way.
+                  </p>
+                  <div className="text-xs text-purple-600 bg-purple-50 p-3 rounded-lg">
+                    🧠 <strong>AI-Enhanced Support:</strong> Powered by Gemini AI to provide personalized responses that adapt to your unique thinking patterns.
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Quick Tips Card */}
+            <Card className="bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 hover:border-purple-300 shadow-lg hover:shadow-2xl transition-all duration-500">
+              <CardContent className="p-10 text-center">
+                <h3 className="text-2xl font-bold mb-6 text-slate-800 flex items-center justify-center gap-2">
+                  <span>🌪️</span>
+                  Quick Overthinking Relief
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  I understand overthinking because I'm designed to help people navigate complex thoughts. 
-                  I won't just tell you to "stop thinking" - instead, I'll help you work with your thoughts 
-                  in a gentler, more manageable way.
-                </p>
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-3xl mb-2">🔄</div>
+                    <div className="font-semibold text-slate-700">Break the Loop</div>
+                    <div className="text-sm text-gray-500">Interrupt spiral patterns</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl mb-2">🎯</div>
+                    <div className="font-semibold text-slate-700">Focus Shift</div>
+                    <div className="text-sm text-gray-500">Redirect mental energy</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl mb-2">🤝</div>
+                    <div className="font-semibold text-slate-700">Gentle Support</div>
+                    <div className="text-sm text-gray-500">Compassionate guidance</div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Professional Footer */}
-      <footer className="bg-gradient-to-r from-slate-700 via-gray-700 to-slate-800 text-white py-8 mt-16 shadow-inner">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-base font-semibold tracking-wide">
-              © {new Date().getFullYear()} Overthinking Buddy — Helping you untangle your thoughts
-            </div>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:underline font-semibold transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:underline font-semibold transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:underline font-semibold transition-colors">
-                Support
-              </a>
-              <a href="#" className="hover:underline font-semibold transition-colors">
-                About
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
